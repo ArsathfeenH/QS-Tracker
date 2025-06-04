@@ -1,1 +1,169 @@
-# QS-Tracker
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realm of Quantaria: QS Level-Up Tracker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #3a3a3a;
+    }
+    .intro {
+      background: #e3f2fd;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .intro h3 {
+      margin-top: 0;
+    }
+    .level {
+      background-color: #ffffff;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .level h2 {
+      color: #0066cc;
+    }
+    .complete {
+      color: green;
+      font-weight: bold;
+    }
+    .btn {
+      padding: 10px 16px;
+      background-color: #0066cc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .btn:disabled {
+      background-color: #ccc;
+    }
+    .progress-container {
+      background-color: #ddd;
+      border-radius: 25px;
+      margin: 20px 0;
+      height: 24px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background-color: #28a745;
+      text-align: center;
+      line-height: 24px;
+      color: white;
+      font-weight: bold;
+    }
+    .xp-bar {
+      margin-bottom: 10px;
+    }
+    a.task-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0066cc;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏰 Realm of Quantaria: QS Level-Up Tracker</h1>
+
+  <div class="intro">
+    <h3>🎮 Welcome, Apprentice QS!</h3>
+    <p>This is your personal quest to master Estimation, Costing & Quantity Surveying.</p>
+    <p>✅ Click "Mark as Complete" after finishing each task to earn XP and level up!</p>
+  </div>
+
+  <div class="xp-bar">
+    <label>XP Progress:</label>
+    <div class="progress-container">
+      <div id="progressBar" class="progress-bar">0%</div>
+    </div>
+  </div>
+
+  <div class="level" id="level1">
+    <h2>Level 1: Valley of Measurements</h2>
+    <p>🎯 Objective: Master unit conversions (m, ft, sq.m, cu.ft, etc.)</p>
+    <a class="task-link" href="#" target="_blank">Practice Task</a>
+    <button class="btn" onclick="markComplete(1, 50)">Mark as Complete</button>
+    <p id="status1"></p>
+  </div>
+
+  <div class="level" id="level2">
+    <h2>Level 2: The BOQ Temple</h2>
+    <p>🎯 Objective: Prepare a BOQ for a simple project</p>
+    <a class="task-link" href="#" target="_blank">Practice Task</a>
+    <button class="btn" onclick="markComplete(2, 100)">Mark as Complete</button>
+    <p id="status2"></p>
+  </div>
+
+  <div class="level" id="level3">
+    <h2>Level 3: Rate Analysis Caverns</h2>
+    <p>🎯 Objective: Analyze the rate for one construction item</p>
+    <a class="task-link" href="#" target="_blank">Practice Task</a>
+    <button class="btn" onclick="markComplete(3, 100)">Mark as Complete</button>
+    <p id="status3"></p>
+  </div>
+
+  <div class="level" id="level4">
+    <h2>Level 4: Procurement Docks</h2>
+    <p>🎯 Objective: Learn tendering and vendor comparison</p>
+    <a class="task-link" href="#" target="_blank">Practice Task</a>
+    <button class="btn" onclick="markComplete(4, 80)">Mark as Complete</button>
+    <p id="status4"></p>
+  </div>
+
+  <div class="level" id="level5">
+    <h2>Level 5: Estimator’s Arena</h2>
+    <p>🎯 Objective: Estimate total cost including contingencies</p>
+    <a class="task-link" href="#" target="_blank">Practice Task</a>
+    <button class="btn" onclick="markComplete(5, 120)">Mark as Complete</button>
+    <p id="status5"></p>
+  </div>
+
+  <div class="level" id="level6">
+    <h2>Level 6: Dimension of Drawing Take-Off</h2>
+    <p>🎯 Objective: Do take-off from basic drawings</p>
+    <a class="task-link" href="#" target="_blank">Practice Task</a>
+    <button class="btn" onclick="markComplete(6, 120)">Mark as Complete</button>
+    <p id="status6"></p>
+  </div>
+
+  <script>
+    let xp = 0;
+    let totalXP = 570;
+
+    function markComplete(level, points) {
+      const status = document.getElementById(`status${level}`);
+      const button = document.querySelector(`#level${level} .btn`);
+      if (!button.disabled) {
+        xp += points;
+        status.innerHTML = "✅ <span class='complete'>Completed!</span> (" + points + " XP)";
+        button.disabled = true;
+        updateProgressBar();
+      }
+    }
+
+    function updateProgressBar() {
+      const bar = document.getElementById("progressBar");
+      const percent = Math.min((xp / totalXP) * 100, 100).toFixed(0);
+      bar.style.width = percent + "%";
+      bar.textContent = percent + "%";
+    }
+  </script>
+</body>
+</html>
