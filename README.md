@@ -110,7 +110,7 @@
   <div class="level" id="level1">
     <h2>Level 1: Valley of Measurements</h2>
     <p>🎯 Objective: Master unit conversions (m, ft, sq.m, cu.ft, etc.)</p>
-    <a class="task-link" href="https://example.com/unit-conversion-task" target="_blank">Practice Task</a>
+    <a class="task-link" href="https://arsathfeenh.github.io/QS-Tracker/tasks/unit-conversion-task.pdf" target="_blank">Practice Task</a>
     <button class="btn" onclick="markComplete(1, 50)">Mark as Complete</button>
     <p id="status1"></p>
   </div>
@@ -118,7 +118,7 @@
   <div class="level" id="level2">
     <h2>Level 2: The BOQ Temple</h2>
     <p>🎯 Objective: Prepare a BOQ for a simple project</p>
-    <a class="task-link" href="https://example.com/boq-preparation" target="_blank">Practice Task</a>
+    <a class="task-link" href="https://arsathfeenh.github.io/QS-Tracker/tasks/boq-preparation.pdf" target="_blank">Practice Task</a>
     <button class="btn" onclick="markComplete(2, 100)">Mark as Complete</button>
     <p id="status2"></p>
   </div>
@@ -126,7 +126,7 @@
   <div class="level" id="level3">
     <h2>Level 3: Rate Analysis Caverns</h2>
     <p>🎯 Objective: Analyze the rate for one construction item</p>
-    <a class="task-link" href="https://example.com/rate-analysis" target="_blank">Practice Task</a>
+    <a class="task-link" href="https://arsathfeenh.github.io/QS-Tracker/tasks/rate-analysis.pdf" target="_blank">Practice Task</a>
     <button class="btn" onclick="markComplete(3, 100)">Mark as Complete</button>
     <p id="status3"></p>
   </div>
@@ -134,7 +134,7 @@
   <div class="level" id="level4">
     <h2>Level 4: Procurement Docks</h2>
     <p>🎯 Objective: Learn tendering and vendor comparison</p>
-    <a class="task-link" href="https://example.com/procurement-practice" target="_blank">Practice Task</a>
+    <a class="task-link" href="https://arsathfeenh.github.io/QS-Tracker/tasks/procurement-practice.pdf" target="_blank">Practice Task</a>
     <button class="btn" onclick="markComplete(4, 80)">Mark as Complete</button>
     <p id="status4"></p>
   </div>
@@ -142,7 +142,7 @@
   <div class="level" id="level5">
     <h2>Level 5: Estimator’s Arena</h2>
     <p>🎯 Objective: Estimate total cost including contingencies</p>
-    <a class="task-link" href="https://example.com/estimation-task" target="_blank">Practice Task</a>
+    <a class="task-link" href="https://arsathfeenh.github.io/QS-Tracker/tasks/estimation-task.pdf" target="_blank">Practice Task</a>
     <button class="btn" onclick="markComplete(5, 120)">Mark as Complete</button>
     <p id="status5"></p>
   </div>
@@ -150,7 +150,7 @@
   <div class="level" id="level6">
     <h2>Level 6: Dimension of Drawing Take-Off</h2>
     <p>🎯 Objective: Do take-off from basic drawings</p>
-    <a class="task-link" href="https://example.com/drawing-takeoff" target="_blank">Practice Task</a>
+    <a class="task-link" href="https://arsathfeenh.github.io/QS-Tracker/tasks/drawing-takeoff.pdf" target="_blank">Practice Task</a>
     <button class="btn" onclick="markComplete(6, 120)">Mark as Complete</button>
     <p id="status6"></p>
   </div>
@@ -179,4 +179,5 @@
   </script>
 </body>
 </html>
+
 
